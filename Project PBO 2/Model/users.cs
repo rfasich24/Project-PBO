@@ -22,10 +22,26 @@ namespace Project_PBO_2.Model
             DataTable dt = objSqlDb.ExecuteQuery(query);
             return dt;
         }
+        public DataTable getDataAlat()
+        {
+            string query = "Select * from alat";
+            DataTable dt = objSqlDb.ExecuteQuery(query);
+            return dt;
+        }
+
 
         public string[] getUnreturned()
         {
             string query = "Select count(status_peminjaman) from peminjaman where status_peminjaman = 'Belum Dikembalikan'";
+            DataTable dt = objSqlDb.ExecuteQuery(query);
+            string[] names = dt.AsEnumerable().Select(r => r["count"].ToString()).ToArray();
+            Console.WriteLine(names);
+            return names;
+        }
+
+        public string[] getBrokenTools()
+        {
+            string query = "Select count(kondisi_alat) from alat where kondisi_alat = 'Rusak'";
             DataTable dt = objSqlDb.ExecuteQuery(query);
             string[] names = dt.AsEnumerable().Select(r => r["count"].ToString()).ToArray();
             Console.WriteLine(names);
