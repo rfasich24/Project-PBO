@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Project_PBO_2
 {
-    public partial class Contact : Page
+    public partial class Alat : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

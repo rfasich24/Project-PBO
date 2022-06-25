@@ -46,9 +46,9 @@
         <div class="container" style="padding-right: 0px;">
             <h1 class="judul"><b>Bengkelin</b></h1>
             <div class="menu" style="color: white;">
-                <h5 style="display:inline; margin-right: 4em;"><button class="menu" href="#">Home</button></h5>
-                <h5 style="display:inline; margin-right: 4em;"><button class="menu" href="#">Alat</button></h5>
-                <h5 style="display:inline;;"><button class="menu" href="#">User</button></h5>
+                <h5 style="display:inline; margin-right: 4em;"><button class="menu" ><a runat="server" href="~/Default">Home</a></button></h5>
+                <h5 style="display:inline; margin-right: 4em;"><button class="menu"><a runat="server" href="~/Alat">Alat</a></button></h5>
+                <h5 style="display:inline;;"><button class="menu"><a runat="server" href="~/About">About</a></button></h5>
             </div>
         </div>
     </nav>
@@ -57,7 +57,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Kelompok F8</p>
             </footer>
         </div>
 
