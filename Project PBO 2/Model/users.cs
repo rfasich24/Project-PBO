@@ -22,13 +22,6 @@ namespace Project_PBO_2.Model
             DataTable dt = objSqlDb.ExecuteQuery(query);
             return dt;
         }
-        public DataTable getDataAlat()
-        {
-            string query = "Select * from alat";
-            DataTable dt = objSqlDb.ExecuteQuery(query);
-            return dt;
-        }
-
 
         public string[] getUnreturned()
         {
@@ -39,14 +32,6 @@ namespace Project_PBO_2.Model
             return names;
         }
 
-        public string[] getBrokenTools()
-        {
-            string query = "Select count(kondisi_alat) from alat where kondisi_alat = 'Rusak'";
-            DataTable dt = objSqlDb.ExecuteQuery(query);
-            string[] names = dt.AsEnumerable().Select(r => r["count"].ToString()).ToArray();
-            Console.WriteLine(names);
-            return names;
-        }
 
         public void hapusUsers(string id_peminjaman)
         {
@@ -90,6 +75,54 @@ namespace Project_PBO_2.Model
 
             string query = "insert into peminjaman (nama_siswa,kelas,nama_alat,jumlah,kondisi_awal,kondisi_akhir,status_peminjaman,deskripsi) values ('{0}', '{1}','{2}', {3}, '{4}', '{5}', '{6}', '{7}')";
             query = string.Format(query, nama_siswa, kelas, nama_alat, jumlah, kondisi_awal, kondisi_akhir, status_peminjaman, deskripsi);
+            objSqlDb.ExecuteNonQuery(query);
+        }
+
+        // Alat
+        public DataTable getDataAlat()
+        {
+            string query = "Select * from alat";
+            DataTable dt = objSqlDb.ExecuteQuery(query);
+            return dt;
+        }
+
+        public string[] getBrokenTools()
+        {
+            string query = "Select count(kondisi_alat) from alat where kondisi_alat = 'Rusak'";
+            DataTable dt = objSqlDb.ExecuteQuery(query);
+            string[] names = dt.AsEnumerable().Select(r => r["count"].ToString()).ToArray();
+            Console.WriteLine(names);
+            return names;
+        }
+        public void hapusAlat(string id_alat)
+        {
+            string query = "Delete from alat where id_alat = :id_alat ::integer ;";
+            objSqlDb.ExecuteNonQuery(query, new NpgsqlParameter(":id_alat", id_alat));
+        }
+
+        public void updateAlat(string nama_alat, string merk, string jumlah, string kondisi_alat,string id_alat)
+        {
+
+            string query = @"update alat set nama_alat    = :nama_alat ::text,
+                                                merk         = :merk ::text,
+                                                jumlah        = :jumlah ::integer,
+                                                kondisi_alat  = :kondisi_alat ::kondisi
+                                                where id_alat = :id_alat ::integer";
+
+            objSqlDb.ExecuteNonQuery(query,
+                new NpgsqlParameter(":nama_alat", nama_alat),
+                new NpgsqlParameter(":merk", merk),
+                new NpgsqlParameter(":jumlah", jumlah),
+                new NpgsqlParameter(":kondisi_alat", kondisi_alat),
+                new NpgsqlParameter(":id_alat", id_alat)
+                );
+
+        }
+
+        public void insertAlat(string nama_alat, string merk, string jumlah, string kondisi_alat)
+        {
+            string query = "insert into alat (nama_alat,merk,jumlah,kondisi_alat) values ('{0}','{1}',{2},'{3}')";
+            query = string.Format(query, nama_alat, merk, jumlah, kondisi_alat);
             objSqlDb.ExecuteNonQuery(query);
         }
 
