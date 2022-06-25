@@ -75,6 +75,16 @@ namespace Project_PBO_2
                 tbkondisiakhir.Text, tbstatuspeminjaman.Text, tbdeskripsi.Text);
             isiData();
             Unreturned();
+
+
+            tbnama.Text = "";
+            tbkelas.Text = "";
+            tbalat.Text = "";
+            tbjumlah.Text = "";
+            tbkondisiawal.Text = "";
+            tbkondisiakhir.Text = "";
+            tbstatuspeminjaman.Text = "";
+            tbdeskripsi.Text = "";
             panelUser.Visible = true;
             panelForm.Visible = false;
         }
@@ -85,6 +95,15 @@ namespace Project_PBO_2
                 tbkondisiakhir.Text, tbstatuspeminjaman.Text, tbdeskripsi.Text, ViewState["id_peminjaman"].ToString());
             isiData();
             Unreturned();
+
+            tbnama.Text = "";
+            tbkelas.Text = "";
+            tbalat.Text = "";
+            tbjumlah.Text = "";
+            tbkondisiawal.Text = "";
+            tbkondisiakhir.Text = "";
+            tbstatuspeminjaman.Text = "";
+            tbdeskripsi.Text = "";
             panelUser.Visible = true;
             panelForm.Visible = false;
         }

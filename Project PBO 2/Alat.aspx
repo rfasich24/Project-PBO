@@ -32,7 +32,7 @@
                 <asp:Label ID="lbbrokentools" runat="server"></asp:Label>
             </div>
             <div class="mt-3">
-                <h2>Daftar nama</h2>
+                <h2>Daftar Nama Alat</h2>
             <asp:GridView ID="GridView2" CssClass="table" runat="server" AutoGenerateColumns="False" 
                 DataKeyNames="id_alat,nama_alat,merk,jumlah,kondisi_alat" OnRowCommand="GridView2_RowCommand" CellPadding="4" ForeColor="Black" GridLines="Vertical" BackColor="White">
                 <AlternatingRowStyle BackColor="#CCCCCC" />
@@ -87,7 +87,7 @@
         <hr />
 
         <asp:Panel runat="server" ID="panelForm" Visible="false">
-            <h3>Form User
+            <h3>Form Alat
             </h3>
             <table>
                 <tr>
