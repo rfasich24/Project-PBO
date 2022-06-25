@@ -46,9 +46,16 @@
         <div class="container" style="padding-right: 0px;">
             <h1 class="judul"><b>Bengkelin</b></h1>
             <div class="menu" style="color: white;">
-                <h5 style="display:inline; margin-right: 4em;"><button class="menu" ><a runat="server" href="~/Default">Home</a></button></h5>
-                <h5 style="display:inline; margin-right: 4em;"><button class="menu"><a runat="server" href="~/Alat">Alat</a></button></h5>
-                <h5 style="display:inline;;"><button class="menu"><a runat="server" href="~/About">About</a></button></h5>
+                <h5 style="display: inline; margin-right: 4em">
+                    <button class="menu"><a runat="server" style="text-decoration: none; color: white;" class="menu" href="/Default">Home</a></button>
+                </h5>
+                <h5 style="display: inline; margin-right: 4em">
+                    <button class="menu"><a runat="server" style="text-decoration: none; color: white;" class="menu" href="/Alat">Alat</a></button>
+                </h5>
+                <h5 style="display: inline; margin-right: 4em">
+                    <button class="menu"><a runat="server" style="text-decoration: none; color: white;" class="menu" href="/About">About Us</a></button>
+                </h5>
+                
             </div>
         </div>
     </nav>

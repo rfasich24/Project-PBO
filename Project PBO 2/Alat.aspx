@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Alat.aspx.cs" Inherits="Project_PBO_2.Alat" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <h3>Your application description page.</h3>
-    <p>Use this area to provide additional information.</p>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <body style="background-color: #ffa500">
     <asp:Label ID="Label1" Class="mt-5" runat="server">Jumlah Alat Rusak : </asp:Label>
     <asp:Label ID="lbbrokentools" runat="server"></asp:Label>
     <asp:GridView ID="GridView2" CssClass="table" runat="server" AutoGenerateColumns="False"
@@ -53,4 +53,5 @@
         <SortedDescendingHeaderStyle BackColor="#383838" />
 
     </asp:GridView>
+                </body>
 </asp:Content>
