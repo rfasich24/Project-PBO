@@ -1,0 +1,79 @@
+.judul{
+    color: white;
+    font-size: 40px;
+    line-height: 2em;
+}
+.judul:hover{
+    color: #FFA500;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.title{
+    color: white;
+    background: none;
+	border: none;
+	padding: 0;
+}
+button{
+    background: none;
+	border: none;
+}
+.bi{
+    background: none;
+	border: none;
+    color: white;
+    padding: 0;
+}
+.bi:hover{
+    text-decoration: none;
+    color: #1F4690;
+    background: none;
+	border: none;
+}
+.search{
+    margin-left: 60em;
+    padding: 0;
+}
+.menu{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    background: none;
+	border: none;
+	padding: 0;
+}
+
+.menu:hover{
+    color: #FFA500;
+}
+
+.menu:active{
+    color: #FFA500;
+}
+
+.card{
+    border-radius: 20px;
+    background-color: #637EB2;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.card:hover{
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.2);
+    transform: translateY(-0.9em);
+}
+.card-body{
+    border-radius: 20px;
+}
+.card-title{
+    font-size: 25px;
+    color: white;
+}
+.card-info{
+    color: white;
+}
+img{
+    color: white;
+    border-radius: 20px;
+}
